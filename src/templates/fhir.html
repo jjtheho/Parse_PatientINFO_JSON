@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Information</title>
+</head>
+
+<body>
+
+<h1> Patient Information </h1>
+<h2> Name of Patient: {{ gn }} {{ fn }}</h2>
+<h2> Organization Name: {{ org }}</h2>
+<h2> Gender: {{ gdr }}</h2>
+<h2> Number of Conditions: {{ num }}</h2>
+<h2> List of Conditions:</h2>
+<ol>
+    {% for item in lst %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ol>
+
+</body>
+</html>
