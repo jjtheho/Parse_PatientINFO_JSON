@@ -6,6 +6,8 @@ app = Flask(__name__)
 @app.route('/')
 
 def patientinfo():
+    # Parses the information of a patient from a JSON file and displays it on the browser.
+    # Information includes Name, Gender, Organization Name, the Number of Conditions, and the List of Conditions
     with open('data.json') as f:
         data = json.load(f)
         family_name = data['name'][0]['family'][0]
@@ -21,7 +23,6 @@ def patientinfo():
                                org=organization,
                                num=numcond,
                                lst=condlst)
-
 
 if __name__ == "__main__":
     app.run()
